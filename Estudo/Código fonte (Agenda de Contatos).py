@@ -97,4 +97,5 @@ while True:  # Criando um loop infinito.
     elif opcao == 4:
         listar()
     elif opcao == 5:
-        apagar() 
+        apagar()
+print("teste")
