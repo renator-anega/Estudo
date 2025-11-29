@@ -4,7 +4,7 @@ agenda = []
 
 def add():
     global agenda
-    print("Registre seu novo contato")
+    print("\nRegistre seu novo contato\n")
     nome = p_nome()
     tlf = validarcll()
     email = str(input("Email: "))
@@ -64,12 +64,17 @@ def editar():
 
 def validarcll():
     while True:
-        cll = int(input("Celular: "))
-        if cll > 9:
-            str(cll)
-            return cll
-        else:
-            print("Número inválido!")
+        try:
+            cllq = input("Celular: ")
+            cll = len(cllq)
+            if cll >= 9:
+                cll = cllq
+                return cll
+            else:
+                str(cll)
+                print("Número inválido!")
+        except ValueError:
+            print("Apenas números!")
 
 def validar(pergunta, inicio, fim):
     while True:
@@ -91,12 +96,12 @@ def menu():
           5 - Apagar um contato 
           6 - Sair 
           """)
-    return validar("Escolha uma opção:", 1, 6)
+    return validar("Escolha uma opção: ", 1, 6)
 
 while True:  # Criando um loop infinito.
     opcao = menu()
     if opcao == 0:
-        print("Opcao Inválida!")
+        print("Opcão Inválida!")
     elif opcao == 6:
         print("Adeus!")
         break
