@@ -1,0 +1,26 @@
+# Ignorar arquivos do Windows
+Ambiente de Impressão/
+Ambiente de Rede/
+Thumbs.db
+Desktop.ini
+
+# Ignorar cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar ambientes virtuais
+venv/
+.env/
+
+# Ignorar logs
+*.log
+
+# Ignorar configurações de IDEs
+.vscode/
+.idea/
+
+# Ignorar arquivos temporários
+*.tmp
+*.bak
