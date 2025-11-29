@@ -64,17 +64,14 @@ def editar():
 
 def validarcll():
     while True:
-        try:
-            cllq = input("Celular: ")
-            cll = len(cllq)
-            if cll >= 9:
-                cll = cllq
-                return cll
-            else:
-                str(cll)
-                print("Número inválido!")
-        except ValueError:
-            print("Apenas números!")
+        cllq = input("Celular: ")
+        cll = len(cllq)
+        if cll >= 9:
+            cll = cllq
+            return cll
+        else:
+            str(cll)
+            print("Número inválido!")
 
 def validar(pergunta, inicio, fim):
     while True:
